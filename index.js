@@ -5,6 +5,7 @@ const saveBtn = document.getElementById("saveBtn");
  * @param
  * @returns
  ******************************************************/
+
 function saveUserInfo() {
   const firstName = document.getElementById("firstName").value;
   const lastName = document.getElementById("lastName").value;
@@ -13,6 +14,7 @@ function saveUserInfo() {
   const state = document.getElementById("state").value;
   const city = document.getElementById("city").value;
   const village = document.getElementById("village").value;
+
   if (firstName && lastName && country && phone && state && city && village) {
     // Creating an object to store user information
     const userInfo = {
@@ -40,28 +42,24 @@ function saveUserInfo() {
 
 function displayUserInfo(userInfo) {
   // Update the HTML content to display user information
-  const card = document.querySelector(".card");
+  const backCard = document.querySelector("#backCard");
+  backCard.innerHTML = `
+    <h2>User Saved Information Card</h2>
+    <p class="p1"><strong>First Name:-</strong> ${userInfo.firstName}</p>
+    <p class="p2"><strong>Last Name:-</strong> ${userInfo.lastName}</p>
+    <p class="p3"><strong>Country:-</strong> ${userInfo.country}</p>
+    <p class="p4"><strong>Phone Number:-</strong> ${userInfo.phone}</p>
+    <p class="p5"><strong>State:-</strong> ${userInfo.state}</p>
+    <p class="p6"><strong>City:-</strong> ${userInfo.city}</p>
+    <p class="p7"><strong>Village:</strong> ${userInfo.village}</p>`;
 
-  card.innerHTML = `
-    <h2>User Saved Information</h2>
-    <p><strong>First Name:-</strong> ${userInfo.firstName}</p>
-    <p><strong>Last Name:-</strong> ${userInfo.lastName}</p>
-    <p><strong>Country:-</strong> ${userInfo.country}</p>
-    <p><strong>Phone Number:-</strong> ${userInfo.phone}</p>
-    <p><strong>State:-</strong> ${userInfo.state}</p>
-    <p><strong>City:-</strong> ${userInfo.city}</p>
-    <p><strong>Village:</strong> ${userInfo.village}</p>`;
-
-  card.style.width = "400px";
-  card.style.display = "flex";
-  card.style.flexDirection = "column";
-  card.style.justifyContent = "center";
-  card.style.alignItems = "start";
-  card.style.left = "20%";
-  card.style.backgroundColor = "blue";
-  card.style.color = "white";
-
-  card.style.fontVariant = "small-caps";
+  // backCard.style.width = "50%";
+  // backCard.style.display = "flex";
+  // backCard.style.flexDirection = "column";
+  // backCard.style.justifyContent = "center";
+  // backCard.style.alignItems = "center";
+  // backCard.style.color = "white";
+  // card.style.fontVariant = "small-caps";
 }
 
 saveBtn.addEventListener("click", () => {

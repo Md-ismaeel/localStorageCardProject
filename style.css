@@ -1,34 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
 body {
-  font-family: Arial, sans-serif;
+  height: auto;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  margin: 0;
+  overflow-x: hidden;
+  background: linear-gradient(to top right, #9ad9ee 0%, #ffb7db 100%);
 }
 
 .card {
-  max-width: 500px;
-  padding: 20px;
-  border: 1px solid #ccc;
+  width: 50%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to top right, #33ccff 0%, #ff99cc 100%);
+}
+.card h1 {
+  color: white;
+  font-variant: small-caps;
+  margin: 0.5rem 0.5rem;
+}
+.cardDiv {
+  width: 70%;
+  height: 3.5rem;
+  padding: 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2075c7;
+  color: white;
+  border-radius: 15px;
 }
 
 label {
-  width: 100%;
-  margin-bottom: 5px;
+  height: 90%;
+  width: 34%;
+  text-align: unset;
+  display: flex;
+  align-items: center;
+  font-variant: small-caps;
 }
 
 input {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
-  box-sizing: border-box;
+  border-radius: 10px;
+  height: 100%;
+  width: 60%;
+  padding: 0px 10px;
+  border: 0;
+  background-color: black;
+  color: white;
 }
 
 .btn {
   width: 100%;
+  margin-top: 2%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,26 +75,154 @@ input {
 button {
   width: 120px;
   height: 2.5rem;
-  background-color: hsl(122, 39%, 49%);
+  font-size: 17px;
+  background-color: hsl(0, 9%, 11%);
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 20px;
   cursor: pointer;
   font-variant: small-caps;
 }
 
 button:hover {
   transform: scale(0.95);
-  background-color: hsl(122, 39%, 39%);
+  background-color: hsl(0, 9%, 21%);
 }
 
-.card p,
-h2 {
-  margin-left: 40px;
-}
-.card p {
+#backCard {
+  width: 50%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  color: white;
+  /* font-variant: small-caps; */
+}
+#backCard h2 {
+  font-variant: small-caps;
+}
+
+#backCard p {
+  width: 65%;
+  height: 3rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0px 20px;
+  background-color: #e681b3;
+  border-radius: 10px;
+  text-transform: capitalize;
+}
+
+#backCard .p1 {
+  gap: 70px;
+}
+
+#backCard .p2 {
+  gap: 70px;
+}
+
+#backCard .p3 {
+  gap: 93px;
+}
+
+#backCard .p4 {
+  gap: 44px;
+}
+
+#backCard .p5 {
+  gap: 120px;
+}
+
+#backCard .p6 {
+  gap: 125px;
+}
+
+#backCard .p7 {
+  gap: 116px;
+}
+
+@media screen and (max-width: 320px) {
+  .card h1 {
+    font-size: 24px;
+  }
+  .card {
+    width: 90%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to top right, #33ccff 0%, #ff99cc 100%);
+  }
+
+  .cardDiv {
+    width: 100%;
+    height: 3.5rem;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2075c7;
+    color: white;
+    border-radius: 15px;
+  }
+
+  #backCard {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    /* font-variant: small-caps; */
+  }
+  #backCard h2 {
+    font-variant: small-caps;
+  }
+
+  #backCard p {
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0px 20px;
+    background-color: #e681b3;
+    border-radius: 10px;
+    text-transform: capitalize;
+  }
+
+  #backCard .p1 {
+    gap: 70px;
+  }
+
+  #backCard .p2 {
+    gap: 70px;
+  }
+
+  #backCard .p3 {
+    gap: 93px;
+  }
+
+  #backCard .p4 {
+    gap: 44px;
+  }
+
+  #backCard .p5 {
+    gap: 120px;
+  }
+
+  #backCard .p6 {
+    gap: 125px;
+  }
+
+  #backCard .p7 {
+    gap: 116px;
+  }
 }
